@@ -1,0 +1,26 @@
+<%- include("header1"); -%>
+
+
+<section class="myblog">
+    <div class="blogs">
+
+        <%   for(var i=0;i<posts.length;i++){  %>
+        <div class="blog-1">
+            <!-- <h1>posts.title</h1> -->
+            <h1><%= posts[i].title %></h1>
+            <h3><%= posts[i].date %></h3>
+            <p><%=posts[i].blog.substring(0,100) + "..." %>
+             <a href="/posts/<%=posts[i].title%>">Read More</a>
+            </p>
+           
+            <% console.log(posts[i]) %>
+        </div>
+        <% }  %>
+
+
+
+
+    </div>
+
+</section>
+<%- include("footer"); -%>
